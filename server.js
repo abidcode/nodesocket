@@ -1,6 +1,6 @@
 var mongo = require('mongodb').MongoClient,
-	Client = require('socket.io').listen(8080).sockets;
-	mongo.connect('mongodb://192.168.1.69/chat',function(err, db){
+	Client = require('socket.io').listen(80).sockets;
+	mongo.connect('mongodb://http://nodejs-androidabid.rhcloud.com/chat',function(err, db){
 			if(err) throw err;
 			Client.on('connection',function(socket){
 					//get mongo db collection
